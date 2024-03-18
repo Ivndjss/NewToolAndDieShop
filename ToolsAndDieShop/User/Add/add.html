@@ -6,21 +6,24 @@
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>Tool 'N Die Shop</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' type='text/css' media='screen' href='management.css'>
+  <link rel='stylesheet' href='add.css'>
 </head>
 <body>
-  <div class="container" id="container">
-    <div class="side panel-container">
+  <div class="container">
+    <div class="column">
+    <div class="leftcolumn" id="side panel-container">
       <form>
-        <h3>TOOL 'N DIE SHOP</h3>
-        <h1>Sign In</h1>
-        <button type="button" class="button button1" />Create Job</button>
-        <button type="button" class="button button1" />View Jobs</button>
-        <button type="button" class="button button1" />Update Jobs</button>
-        <button type="button" class="button button1" />Remove Jobs</button>
+        <h1>TOOL 'N DIE SHOP</h1>
+        <h1><!--User tag or Admin tag--></h1>
+        <button class="button button1" onclick="createJob()">Create Job</button>
+        <button class="button button1" onclick="viewJobs()">View Jobs</button>
+        <button class="button button1" onclick="updateJobs()">Update Jobs</button>
+        <button class="button button1" onclick="removeJobs()">Remove Jobs</button>
       </form>
     </div>
-    <div class="main panel-container">
+  </div>
+  <div class="column">
+    <div class="rightcolumn" id="main panel-container">
       <form>
         <label for="jobNumber">Job Number: </label>
         <span id="jobNumber"></span>
@@ -51,9 +54,12 @@
           </table>
         </div>
         <button id="jobSaveButton">Save Job</button>
-        <button id="jobViewButton">View Job</button>
+        <!--<button id="jobViewButton">View Job</button> -->
         <div id="jobList"></div>
       </form>
-
     </div>
-  </div></body></html>
+    </div>
+  </div>
+</body>
+<script src="add.js"></script>
+</html>
