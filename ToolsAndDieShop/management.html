@@ -1,4 +1,103 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Tool 'N Die Shop</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='management.css'>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="side panel-container">
+      <form>
+        <h3>TOOL 'N DIE SHOP</h3>
+        <h1>Sign In</h1>
+        <button type="button" class="button button1" />Create Job</button>
+        <button type="button" class="button button1" />View Jobs</button>
+        <button type="button" class="button button1" />Update Jobs</button>
+        <button type="button" class="button button1" />Remove Jobs</button>
+        <button type="button" class="button button2" href = "login.html" />Back</button>
+      </form>
+    </div>
+    <div class="main panel-container">
+      <form>
+        <label for="jobNumber">Job Number: </label>
+        <span id="jobNumber"></span>
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Name" id="name">
+        <label for="description">Description:</label>
+        <input type="text" placeholder="Description" id="description">
+        <label for="startDate">Start Date:</label>
+        <input type="date" class="form-control" id="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" class="form-control" id="endDate">
+        <label for="startTime">Start Time:</label>
+        <input type="time" id="startTime" name="startTime">
+        <label for="endTime">End Time:</label>
+        <input type="time" id="endTime" name="endTime">
+        <div class="scrollable-table-wrapper">
+          <table id="materialsTable">
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="selectAll"></th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+            <tbody id="materialsTableBody"></tbody>
+          </table>
+        </div>
+        <button id="jobSaveButton" class="button3">Save Job</button>
+        <button id="jobViewButton" class="button3">View Job</button>
+        <div id="jobList"></div>
+      </form>
+      <form>
+        <label for="ongoing-jobs">Ongoing Jobs:</label>
+        <select id="ongoing-jobs">
+          <option value="">-- Select Job --</option>
+        </select>
+        <label for="viewJobNumber">Job Number:</label>
+        <span id="viewJobNumber">--</span><br>
+
+        <label for="viewJobName">Name:</label>
+        <span id="viewJobName">--</span><br>
+
+        <label for="viewJobDesc">Description:</label>
+        <span id="viewJobDesc">--</span><br>
+
+        <label for="viewJobStartDate">Start Date:</label>
+        <span id="viewJobStartDate">--</span><br>
+
+        <label for="viewJobEndDate">End Date:</label>
+        <span id="viewJobEndDate">--</span><br>
+
+        <label for="viewJobStartTime">Start Time:</label>
+        <span id="viewJobStartTime">--</span><br>
+
+        <label for="viewJobEndTime">End Time:</label>
+        <span id="viewJobEndTime">--</span><br>
+
+        <label for="viewJobProgress">Job Progress:</label>
+        <span id="viewJobProgress">--</span><br>
+        <div class="scrollable-table-wrapper">
+          <table id="materialsForJobTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+            <tbody id="materialsForJobTableBody"></tbody>
+          </table>
+        </div>
+      </form>
+      <form>
       <form>
         <label for="ongoing-jobs">Ongoing Jobs:</label>
         <select id="ongoing-jobs">
