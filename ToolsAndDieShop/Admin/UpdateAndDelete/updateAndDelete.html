@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <label for="editOngoing-Jobs">Ongoing Jobs:</label>
+        <select id="editOngoing-Jobs">
+          <option value="">-- Select Job --</option>
+        </select>
+        <form id="editForm" style="display: none;">
+          <h2>Edit Job Details</h2>
+          <label for="editName">Job Name:</label>
+          <input type="text" id="editName" required><br>
+          <label for="editDescription">Description:</label>
+          <textarea id="editDescription" required></textarea><br>
+          <label for="editStartDate">Start Date:</label>
+          <input type="date" id="editStartDate" required><br>
+          <label for="editEndDate">End Date:</label>
+          <input type="date" id="editEndDate" required><br>
+          <label for="editStartTime">Start Time:</label>
+          <input type="time" id="editStartTime" required><br>
+          <label for="editEndTime">End Time:</label>
+          <input type="time" id="editEndTime" required><br>
+          <h2>Materials</h2>
+          <div class="scrollable-table-wrapper">
+            <table id="editMaterialsTable">
+              <thead>
+                <tr>
+                  <th><input type="checkbox" id="selectAll"></th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>ID</th>
+                </tr>
+              </thead>
+              <tbody id="editMaterialsTableBody"></tbody>
+            </table>
+          </div>
+          <button type="button" id="jobUpdateButton">Update Job</button>
+        </form>
+      </form>
+      <form>
+        <label for="deleteOngoing-Jobs">Ongoing Jobs:</label>
+        <select id="deleteOngoing-Jobs">
+          <option value="">-- Select Job --</option>
+        </select>
+        <label for="deleteJobNumber">Job Number:</label>
+        <span id="deleteJobNumber">--</span><br>
+
+        <label for="deleteJobName">Name:</label>
+        <span id="deleteJobName">--</span><br>
+
+        <label for="deleteJobDesc">Description:</label>
+        <span id="deleteJobDesc">--</span><br>
+
+        <label for="deleteJobStartDate">Start Date:</label>
+        <span id="deleteJobStartDate">--</span><br>
+
+        <label for="deleteJobEndDate">End Date:</label>
+        <span id="deleteJobEndDate">--</span><br>
+
+        <label for="deleteJobStartTime">Start Time:</label>
+        <span id="deleteJobStartTime">--</span><br>
+
+        <label for="deleteJobEndTime">End Time:</label>
+        <span id="deleteJobEndTime">--</span><br>
+
+        <label for="deleteJobProgress">Job Progress:</label>
+        <span id="deleteJobProgress">--</span><br>
+        <div class="scrollable-table-wrapper">
+          <table id="deleteMaterialsForJobTable">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>ID</th>
+              </tr>
+            </thead>
+            <tbody id="deleteMaterialsForJobTableBody"></tbody>
+          </table>
+        </div>
+        <button id="jobDeleteButton">Delete Job</button>
+    </form>
+
+    
+</body>
+<script src="../sidepanel.js"></script>
+<script src="updateAndDelete.js"></script>
+
+</html>

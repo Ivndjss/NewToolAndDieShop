@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Tool 'N Die Shop</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='view.css'>
+</head>
+<body>
+  <div class="container">
+    <div class="column">
+    <div class="leftcolumn" id="side panel-container">
+      <form>
+        <h1>TOOL 'N DIE SHOP</h1>
+        <h1><!--User tag or Admin tag--></h1>
+        <button class="button button1" onclick="createJob()">Create Job</button>
+        <button class="button button1" onclick="viewJobs()">View Jobs</button>
+        <button class="button button1" onclick="updateJobs()">Update Jobs</button>
+        <button class="button button1" onclick="removeJobs()">Remove Jobs</button>
+      </form>
+    </div>
+  </div>
+  <div class="column">
+    <div class="rightcolumn" id="main panel-container">
+      
+        <form>
+            <label for="ongoing-jobs">Ongoing Jobs:</label>
+            <select id="ongoing-jobs">
+              <option value="">-- Select Job --</option>
+            </select>
+            <label for="viewJobNumber">Job Number:</label>
+            <span id="viewJobNumber">--</span><br>
+    
+            <label for="viewJobName">Name:</label>
+            <span id="viewJobName">--</span><br>
+    
+            <label for="viewJobDesc">Description:</label>
+            <span id="viewJobDesc">--</span><br>
+    
+            <label for="viewJobStartDate">Start Date:</label>
+            <span id="viewJobStartDate">--</span><br>
+    
+            <label for="viewJobEndDate">End Date:</label>
+            <span id="viewJobEndDate">--</span><br>
+    
+            <label for="viewJobStartTime">Start Time:</label>
+            <span id="viewJobStartTime">--</span><br>
+    
+            <label for="viewJobEndTime">End Time:</label>
+            <span id="viewJobEndTime">--</span><br>
+    
+            <label for="viewJobProgress">Job Progress:</label>
+            <span id="viewJobProgress">--</span><br>
+            <div class="scrollable-table-wrapper">
+              <table id="materialsForJobTable">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>ID</th>
+                  </tr>
+                </thead>
+                <tbody id="materialsForJobTableBody"></tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+    </div>
+  </div>
+</body>
+<script src="../sidepanel.js"></script>
+<script src="view.js"></script>
+</html>
